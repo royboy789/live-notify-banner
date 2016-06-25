@@ -1,4 +1,4 @@
-<div class="row" ng-show="notify.active == '1'">
+<div class="row live-notification-text-container" ng-class="notify.active == '1' ? 'active' : 'inactive'">
     <div class="col-sm-12">
         <span class="live-notification-text">
             <h3>{{notify.text}}</h3>

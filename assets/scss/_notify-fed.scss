@@ -4,4 +4,18 @@
     position: fixed;
     top: 0;
     width: 100%;
+
+    .live-notification-text-container {
+        height: 0px;
+        overflow: hidden;
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -ms-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        transition: all 0.5s;
+
+        &.active {
+            height: 60px;
+        }
+    }
 }
