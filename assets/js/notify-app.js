@@ -21,6 +21,16 @@ var live_notify_app = live_notify_app || {};
            }
         });
 
+        notification.app.directive('notifyFed', function(){
+            return{
+                restrict: 'E',
+                templateUrl: notify_local.template_directory + '/fed.html',
+                controller: ['$scope', function( $scope ){
+                    console.log('here');
+                }]
+            }
+        });
+
         return notification;
     }(live_notify_app.app || {}))
 

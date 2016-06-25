@@ -32,6 +32,14 @@ class live_notify {
         $scripts->load_scripts();
     }
 
+    function fed_scripts() {
+        $scripts = new live_notify_scripts();
+        $scripts->load_scripts();
+    }
+
+    function footer_inject() {
+        echo '<div ng-app="live-notify-app" class="container-fluid live-notify-fed"><div class="container"><notify-fed></notify-fed></div></div>';
+    }
 
 }
 
@@ -44,10 +52,15 @@ $notify_app = new live_notify();
 add_action( 'admin_menu', array( $notify_app, 'admin_menu' ) );
 
 /*
- * ADMIN APP: Enqueue JavaScript for application
+ * Enqueue JavaScript for admin and front end
  */
 add_action( 'admin_enqueue_scripts', array( $notify_app, 'admin_scripts' ) );
+add_action( 'wp_enqueue_scripts', array( $notify_app, 'fed_scripts' ) );
 
+/**
+ * Front End Footer
+ */
+add_action( 'wp_footer', array( $notify_app, 'footer_inject' ) );
 
 
 ?>
