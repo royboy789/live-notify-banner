@@ -1,14 +1,23 @@
-<form class="form col-sm-12">
+<form class="form col-sm-12" ng-submit="updateNotification()">
     <div class="row">
         <div class="col-sm-4">
             <h3>Notification Settings</h3>
         </div>
         <div class="col-sm-8">
-            <label>Notification Active?</label>
-            <select class="form-control" ng-model="notify.active">
-                <option value="1">Yes</option>
-                <option value="0">No</option>
-            </select>
+            <div class="form-group">
+                <label>Notification Active?</label>
+                <select class="form-control" ng-model="notify.active">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Notification Text</label>
+                <input class="form-control" ng-model="notify.text" placeholder="Text for notification" />
+            </div>
+            <div class="form-group">
+                <button class="btn btn-block btn-primary">Update Notification</button>
+            </div>
         </div>
     </div>
 </form>

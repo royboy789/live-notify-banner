@@ -16,6 +16,10 @@ var live_notify_app = live_notify_app || {};
                        active: '0'
                    }
 
+                   $scope.updateNotification = function() {
+                       console.log('updating...');
+                   }
+
 
                }]
            }
