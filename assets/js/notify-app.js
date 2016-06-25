@@ -5,6 +5,7 @@ var live_notify_app = live_notify_app || {};
     live_notify_app.app = (function( notification ){
 
         notification.app = angular.module( 'live-notify-app', ['ngResource', 'firebase'] );
+        notification.firebase_url = 'https://cc-notifications.firebaseio.com';
 
         notification.app.directive('notifyAdmin', function(){
            return{
@@ -14,7 +15,7 @@ var live_notify_app = live_notify_app || {};
 
                    $scope.save_notify = false;
 
-                   var ref = new Firebase('https://cc-notifications.firebaseio.com');
+                   var ref = new Firebase( notification.firebase_url );
                    $scope.notify = $firebaseObject( ref );
 
 
@@ -38,8 +39,14 @@ var live_notify_app = live_notify_app || {};
             return{
                 restrict: 'E',
                 templateUrl: notify_local.template_directory + '/fed.html',
-                controller: ['$scope', function( $scope ){
-                    console.log('here');
+                controller: ['$scope', '$firebaseObject', '$timeout', function( $scope, $firebaseObject, $timeout ) {
+                    $scope.notify = {};
+
+                    var ref = new Firebase( notification.firebase_url ),
+                        syncObject = $firebaseObject( ref );
+                    syncObject.$bindTo($scope, 'notify');
+                    
+
                 }]
             }
         });
