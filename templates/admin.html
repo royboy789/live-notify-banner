@@ -13,6 +13,15 @@
                 </select>
             </div>
             <div class="form-group" ng-show="notify.active == '1'">
+                <label>Notification Type</label>
+                <select class="form-control" ng-model="notify.type">
+                    <option value="weather">Weather</option>
+                    <option value="security">Security</option>
+                    <option value="class-registration">Class or Registration</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="form-group" ng-show="notify.active == '1'">
                 <label>Notification Text</label>
                 <input class="form-control" ng-model="notify.text" placeholder="Text for notification" ng-required="notify.active == '1'" />
             </div>
