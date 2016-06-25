@@ -13,7 +13,7 @@ var live_notify_app = live_notify_app || {};
                controller: ['$scope', function( $scope ) {
 
                    $scope.notify = {
-                       power: 'off'
+                       active: '0'
                    }
 
 
