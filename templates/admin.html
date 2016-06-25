@@ -2,6 +2,7 @@
     <div class="row">
         <div class="col-sm-4">
             <h3>Notification Settings</h3>
+            <div ng-show="save_notify">saved</div>
         </div>
         <div class="col-sm-8">
             <div class="form-group">
@@ -11,9 +12,9 @@
                     <option value="0">No</option>
                 </select>
             </div>
-            <div class="form-group">
+            <div class="form-group" ng-show="notify.active == '1'">
                 <label>Notification Text</label>
-                <input class="form-control" ng-model="notify.text" placeholder="Text for notification" />
+                <input class="form-control" ng-model="notify.text" placeholder="Text for notification" ng-required="notify.active == '1'" />
             </div>
             <div class="form-group">
                 <button class="btn btn-block btn-primary">Update Notification</button>

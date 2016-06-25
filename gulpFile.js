@@ -6,6 +6,7 @@ var gulp = require('gulp'),
 var jsFileList = [
     'node_modules/angular/angular.min.js',
     'node_modules/angular-resource/angular-resource.min.js',
+    'node_modules/angularfire/dist/angularfire.min.js',
     'assets/js/notify-app.js'
 ];
 

@@ -19,6 +19,7 @@
   "devDependencies": {
     "angular": "^1.4.8",
     "angular-resource": "^1.4.8",
+    "angularfire": "^2.0.1",
     "bootstrap-sass": "^3.3.6",
     "gulp": "^3.9.0",
     "gulp-concat": "^2.6.0",

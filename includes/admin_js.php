@@ -13,6 +13,8 @@ class live_notify_scripts {
                 'nonce' => wp_create_nonce( 'wp_rest' ),
             )
         );
+
+        wp_enqueue_script( 'fireabase-base', 'https://cdn.firebase.com/js/client/2.2.1/firebase.js', array(), null, false );
     }
 
 }
