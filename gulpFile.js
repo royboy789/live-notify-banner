@@ -24,7 +24,7 @@ gulp.task( 'js', function(){
 });
 
 gulp.task( 'watch', function(){
-    gulp.watch('./assets/scss/styles.scss', ['sass'] );
+    gulp.watch('./assets/scss/*.scss', ['sass'] );
     gulp.watch(jsFileList, ['js'] );
 });
 
