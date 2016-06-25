@@ -18,6 +18,11 @@ var live_notify_app = live_notify_app || {};
                    var ref = new Firebase( notification.firebase_url );
                    $scope.notify = $firebaseObject( ref );
 
+                   $scope.notify.$loaded().then(function(){
+                       if( !$scope.notify.active ) {
+                           $scope.notify.active = '0';
+                       }
+                   });
 
                    $scope.updateNotification = function() {
                        console.log('updating...');
