@@ -38,7 +38,7 @@ class live_notify {
     }
 
     function footer_inject() {
-        echo '<div ng-app="live-notify-app" class="container-fluid live-notify-fed"><div class="container"><notify-fed></notify-fed></div></div>';
+        echo '<div ng-app="live-notify-app" class="container-fluid live-notify-fed {{notify.type}}"><div class="container"><notify-fed></notify-fed></div></div>';
     }
 
 }

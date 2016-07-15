@@ -16,9 +16,18 @@
 
         &.active {
             height: 60px;
+            padding: 20px 0;
         }
         .notification-type {
             text-transform: capitalize;
         }
+        .notification-type {
+            text-transform: capitalize;
+        }
+    }
+    /** Notification Type **/
+    &.weather {
+        background: lightblue;
+        color: #444;
     }
 }
