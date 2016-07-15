@@ -17,6 +17,5 @@ wp-content/plugins/hello.php
 /sitemap.xml.gz
 
 node_modules/
-build/
 
 
