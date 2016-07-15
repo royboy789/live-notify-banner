@@ -22,11 +22,12 @@ var live_notify_app = live_notify_app || {};
                        if( !$scope.notify.active ) {
                            $scope.notify.active = '0';
                        }
+
                        if( !$scope.notify.type ) {
                            $scope.notify.type = 'other';
                        }
                    });
-
+                   
                    $scope.updateNotification = function() {
                        console.log('updating...');
                        $scope.notify.$save($scope.notify);
@@ -53,7 +54,7 @@ var live_notify_app = live_notify_app || {};
                     var ref = new Firebase( notification.firebase_url ),
                         syncObject = $firebaseObject( ref );
                     syncObject.$bindTo($scope, 'notify');
-                    
+
 
                 }]
             }
