@@ -24,6 +24,10 @@
         .notification-type {
             text-transform: capitalize;
         }
+        h3 {
+            margin: 0;
+            padding: 0;
+        }
     }
     /** Notification Type **/
     &.weather {
