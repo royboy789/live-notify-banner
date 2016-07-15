@@ -25,4 +25,9 @@
             text-transform: capitalize;
         }
     }
+    /** Notification Type **/
+    &.weather {
+        background: lightblue;
+        color: #444;
+    }
 }
